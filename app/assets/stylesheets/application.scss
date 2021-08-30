@@ -28,3 +28,30 @@
  .notification:not(:last-child) {
   margin-bottom: 0;
 }
+
+#feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 { 
+    font-size: 2.5rem;
+  }
+
+  .header {
+    padding-bottom: 10px;
+  }
+
+  .box {
+    width: 800px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .fa-trash-o {
+    padding-left: 20px;
+  }
+}

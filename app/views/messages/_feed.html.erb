@@ -1,0 +1,24 @@
+<div id='feed' class="column">
+  <h1 class="header">Messages</h1>
+
+  <div class="messages">
+    <% @messages.each do |msg| %>
+      <div class="box">
+        <div class="media-content">
+          <div class="content">
+            <p><%= msg.message%></p>
+            <span class="author">- <strong>Lorem Ipsum</strong></span>
+          </div>
+          <div class="options">
+            <%= link_to edit_message_path(msg), class: "level-item" do %>
+              <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+            <% end %>
+            <%= link_to msg, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?" } do %>
+              <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
