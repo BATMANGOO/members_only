@@ -49,9 +49,10 @@
   .options {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
   }
 
-  .fa-trash-o {
-    padding-left: 20px;
+  .fa-pencil {
+    padding-right: 20px;
   }
 }
