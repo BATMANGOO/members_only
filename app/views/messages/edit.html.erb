@@ -1,6 +1,23 @@
 <h1>Editing Message</h1>
 
-<%= render 'form', message: @message %>
+<div class="section">
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-half">
+				<h1 class="title">Edit your message:</h1>
+					<%= render 'form', message: @message %>
+			</div>
+		</div>
+	</div>
+</div>
 
-<%= link_to 'Show', @message %> |
-<%= link_to 'Back', messages_path %>
+<nav class="navbar is-fixed-bottom">
+	<div class="navbar-menu">
+		<div class="navbar-item">
+			<div class="field is-grouped">
+				<p class="control">
+				<%= link_to 'Cancel', messages_path, class: "button is-dark" %>
+				</p>
+		</div>
+	</div>
+</nav>
