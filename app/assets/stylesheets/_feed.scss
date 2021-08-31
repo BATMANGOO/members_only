@@ -1,0 +1,31 @@
+#feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 { 
+    font-size: 2.5rem;
+  }
+
+  .header {
+    padding-bottom: 10px;
+  }
+
+  .box {
+    width: 800px;
+  }
+
+  .author-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .options {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .fa-pencil {
+    padding-right: 20px;
+  }
+}

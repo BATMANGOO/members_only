@@ -7,22 +7,25 @@
         <div class="media-content">
           <div class="content">
             <p><%= msg.message%></p>
-            <% if user_signed_in? %>
-              <span class="author">- <strong><%= msg.user.username %></strong></span>
-            <% else %>
-              <span class="author">- <strong>Anonymous</strong></span>
-            <% end %>
+            <div class="author-content">
+              <% if user_signed_in? %>
+                <span class="author">- <strong><%= msg.user.username %></strong></span>
+              <% else %>
+                <span class="author">- <strong>Anonymous</strong></span>
+              <% end %>
+
+              <% if user_signed_in? && current_user.id == msg.user_id %>
+                <span class="options">
+                  <%= link_to edit_message_path(msg), class: "level-item" do %>
+                    <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                  <% end %>
+                  <%= link_to msg, method: :delete, data: { confirm: "Are you sure you want to delete this post?" } do %>
+                    <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                  <% end %>
+                </span>
+              <% end %>
+            </div>
           </div>
-          <% if user_signed_in? && current_user.id == msg.user_id %>
-          <div class="options">
-            <%= link_to edit_message_path(msg), class: "level-item" do %>
-              <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-            <% end %>
-            <%= link_to msg, method: :delete, data: { confirm: "Are you sure you want to delete this post?" } do %>
-              <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-            <% end %>
-          </div>
-          <% end %>
         </div>
       </div>
     <% end %>

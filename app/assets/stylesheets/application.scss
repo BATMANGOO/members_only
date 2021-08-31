@@ -15,6 +15,7 @@
  */
 
  @import "bulma";
+ @import "_feed.scss";
 
  .navbar {
    background-color: gold;
@@ -29,30 +30,4 @@
   margin-bottom: 0;
 }
 
-#feed {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  h1 { 
-    font-size: 2.5rem;
-  }
-
-  .header {
-    padding-bottom: 10px;
-  }
-
-  .box {
-    width: 800px;
-  }
-
-  .options {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  .fa-pencil {
-    padding-right: 20px;
-  }
-}
